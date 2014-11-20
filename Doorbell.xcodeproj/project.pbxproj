@@ -7,12 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		684D63F71A1E3EEC00EC0170 /* open-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 684D63F31A1E3EEC00EC0170 /* open-active.png */; };
+		684D63F81A1E3EEC00EC0170 /* open-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 684D63F41A1E3EEC00EC0170 /* open-active@2x.png */; };
+		684D63F91A1E3EEC00EC0170 /* open.png in Resources */ = {isa = PBXBuildFile; fileRef = 684D63F51A1E3EEC00EC0170 /* open.png */; };
+		684D63FA1A1E3EEC00EC0170 /* open@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 684D63F61A1E3EEC00EC0170 /* open@2x.png */; };
+		684D63FD1A1E424B00EC0170 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 684D63FB1A1E424B00EC0170 /* splash.png */; };
+		684D63FE1A1E424B00EC0170 /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 684D63FC1A1E424B00EC0170 /* splash@2x.png */; };
+		684D64021A1E42D100EC0170 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 684D63FF1A1E42D100EC0170 /* icon.png */; };
+		684D64031A1E42D100EC0170 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 684D64001A1E42D100EC0170 /* icon@2x.png */; };
+		684D64041A1E42D200EC0170 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 684D64011A1E42D100EC0170 /* icon@3x.png */; };
+		684D64061A1E5ED100EC0170 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 684D64051A1E5ED100EC0170 /* settings.plist */; };
 		6864512A1A1A3B9B007F5DD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686451291A1A3B9B007F5DD1 /* AppDelegate.swift */; };
 		6864512C1A1A3B9B007F5DD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6864512B1A1A3B9B007F5DD1 /* ViewController.swift */; };
 		6864512F1A1A3B9B007F5DD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6864512D1A1A3B9B007F5DD1 /* Main.storyboard */; };
 		686451311A1A3B9B007F5DD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686451301A1A3B9B007F5DD1 /* Images.xcassets */; };
 		686451341A1A3B9B007F5DD1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 686451321A1A3B9B007F5DD1 /* LaunchScreen.xib */; };
 		686451401A1A3B9B007F5DD1 /* DoorbellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6864513F1A1A3B9B007F5DD1 /* DoorbellTests.swift */; };
+		6864518C1A1A4CAE007F5DD1 /* DoorbellRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686451891A1A4CAE007F5DD1 /* DoorbellRequest.swift */; };
+		6899053C1A1E305A00133BC6 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6899053B1A1E305A00133BC6 /* background.jpg */; };
+		68ED0F401A1D0CCC00246A9E /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 68ED0F3A1A1D0C9100246A9E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,9 +36,64 @@
 			remoteGlobalIDString = 686451231A1A3B9B007F5DD1;
 			remoteInfo = Doorbell;
 		};
+		68ED0F391A1D0C9100246A9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68ED0F341A1D0C9000246A9E /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		68ED0F3B1A1D0C9100246A9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68ED0F341A1D0C9000246A9E /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		68ED0F3D1A1D0C9800246A9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68ED0F341A1D0C9000246A9E /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6864515E1A1A3C97007F5DD1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68ED0F3F1A1D0CBD00246A9E /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				68ED0F401A1D0CCC00246A9E /* Alamofire.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		684D63F31A1E3EEC00EC0170 /* open-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open-active.png"; sourceTree = "<group>"; };
+		684D63F41A1E3EEC00EC0170 /* open-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open-active@2x.png"; sourceTree = "<group>"; };
+		684D63F51A1E3EEC00EC0170 /* open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = open.png; sourceTree = "<group>"; };
+		684D63F61A1E3EEC00EC0170 /* open@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open@2x.png"; sourceTree = "<group>"; };
+		684D63FB1A1E424B00EC0170 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		684D63FC1A1E424B00EC0170 /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
+		684D63FF1A1E42D100EC0170 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		684D64001A1E42D100EC0170 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		684D64011A1E42D100EC0170 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
+		684D64051A1E5ED100EC0170 /* settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
 		686451241A1A3B9B007F5DD1 /* Doorbell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doorbell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		686451281A1A3B9B007F5DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		686451291A1A3B9B007F5DD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +104,10 @@
 		686451391A1A3B9B007F5DD1 /* DoorbellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoorbellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6864513E1A1A3B9B007F5DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6864513F1A1A3B9B007F5DD1 /* DoorbellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorbellTests.swift; sourceTree = "<group>"; };
+		6864514F1A1A3C96007F5DD1 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		686451891A1A4CAE007F5DD1 /* DoorbellRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorbellRequest.swift; sourceTree = "<group>"; };
+		6899053B1A1E305A00133BC6 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		68ED0F341A1D0C9000246A9E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +131,10 @@
 		6864511B1A1A3B9B007F5DD1 = {
 			isa = PBXGroup;
 			children = (
+				68ED0F341A1D0C9000246A9E /* Alamofire.xcodeproj */,
 				686451261A1A3B9B007F5DD1 /* Doorbell */,
 				6864513C1A1A3B9B007F5DD1 /* DoorbellTests */,
+				6864514E1A1A3C96007F5DD1 /* Frameworks */,
 				686451251A1A3B9B007F5DD1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,11 +151,23 @@
 		686451261A1A3B9B007F5DD1 /* Doorbell */ = {
 			isa = PBXGroup;
 			children = (
+				686451891A1A4CAE007F5DD1 /* DoorbellRequest.swift */,
 				686451291A1A3B9B007F5DD1 /* AppDelegate.swift */,
 				6864512B1A1A3B9B007F5DD1 /* ViewController.swift */,
+				684D64051A1E5ED100EC0170 /* settings.plist */,
+				6899053B1A1E305A00133BC6 /* background.jpg */,
 				6864512D1A1A3B9B007F5DD1 /* Main.storyboard */,
 				686451301A1A3B9B007F5DD1 /* Images.xcassets */,
 				686451321A1A3B9B007F5DD1 /* LaunchScreen.xib */,
+				684D63F31A1E3EEC00EC0170 /* open-active.png */,
+				684D63F41A1E3EEC00EC0170 /* open-active@2x.png */,
+				684D63F51A1E3EEC00EC0170 /* open.png */,
+				684D63F61A1E3EEC00EC0170 /* open@2x.png */,
+				684D63FB1A1E424B00EC0170 /* splash.png */,
+				684D63FC1A1E424B00EC0170 /* splash@2x.png */,
+				684D63FF1A1E42D100EC0170 /* icon.png */,
+				684D64001A1E42D100EC0170 /* icon@2x.png */,
+				684D64011A1E42D100EC0170 /* icon@3x.png */,
 				686451271A1A3B9B007F5DD1 /* Supporting Files */,
 			);
 			path = Doorbell;
@@ -112,6 +198,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6864514E1A1A3C96007F5DD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6864514F1A1A3C96007F5DD1 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68ED0F351A1D0C9000246A9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68ED0F3A1A1D0C9100246A9E /* Alamofire.framework */,
+				68ED0F3C1A1D0C9100246A9E /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +225,13 @@
 				686451201A1A3B9B007F5DD1 /* Sources */,
 				686451211A1A3B9B007F5DD1 /* Frameworks */,
 				686451221A1A3B9B007F5DD1 /* Resources */,
+				6864515E1A1A3C97007F5DD1 /* Embed App Extensions */,
+				68ED0F3F1A1D0CBD00246A9E /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				68ED0F3E1A1D0C9800246A9E /* PBXTargetDependency */,
 			);
 			name = Doorbell;
 			productName = Doorbell;
@@ -161,6 +267,7 @@
 				TargetAttributes = {
 					686451231A1A3B9B007F5DD1 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = B6MXRS8JAE;
 					};
 					686451381A1A3B9B007F5DD1 = {
 						CreatedOnToolsVersion = 6.1;
@@ -179,6 +286,12 @@
 			mainGroup = 6864511B1A1A3B9B007F5DD1;
 			productRefGroup = 686451251A1A3B9B007F5DD1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 68ED0F351A1D0C9000246A9E /* Products */;
+					ProjectRef = 68ED0F341A1D0C9000246A9E /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				686451231A1A3B9B007F5DD1 /* Doorbell */,
@@ -187,14 +300,42 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		68ED0F3A1A1D0C9100246A9E /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 68ED0F391A1D0C9100246A9E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		68ED0F3C1A1D0C9100246A9E /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 68ED0F3B1A1D0C9100246A9E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		686451221A1A3B9B007F5DD1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6864512F1A1A3B9B007F5DD1 /* Main.storyboard in Resources */,
+				6899053C1A1E305A00133BC6 /* background.jpg in Resources */,
+				684D63FA1A1E3EEC00EC0170 /* open@2x.png in Resources */,
 				686451341A1A3B9B007F5DD1 /* LaunchScreen.xib in Resources */,
+				684D63F71A1E3EEC00EC0170 /* open-active.png in Resources */,
+				684D64061A1E5ED100EC0170 /* settings.plist in Resources */,
+				684D64031A1E42D100EC0170 /* icon@2x.png in Resources */,
+				684D63FE1A1E424B00EC0170 /* splash@2x.png in Resources */,
+				684D64021A1E42D100EC0170 /* icon.png in Resources */,
+				684D64041A1E42D200EC0170 /* icon@3x.png in Resources */,
+				684D63F81A1E3EEC00EC0170 /* open-active@2x.png in Resources */,
 				686451311A1A3B9B007F5DD1 /* Images.xcassets in Resources */,
+				684D63FD1A1E424B00EC0170 /* splash.png in Resources */,
+				684D63F91A1E3EEC00EC0170 /* open.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6864518C1A1A4CAE007F5DD1 /* DoorbellRequest.swift in Sources */,
 				6864512C1A1A3B9B007F5DD1 /* ViewController.swift in Sources */,
 				6864512A1A1A3B9B007F5DD1 /* AppDelegate.swift in Sources */,
 			);
@@ -232,6 +374,11 @@
 			isa = PBXTargetDependency;
 			target = 686451231A1A3B9B007F5DD1 /* Doorbell */;
 			targetProxy = 6864513A1A1A3B9B007F5DD1 /* PBXContainerItemProxy */;
+		};
+		68ED0F3E1A1D0C9800246A9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = 68ED0F3D1A1D0C9800246A9E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -289,7 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -325,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -336,9 +483,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Doorbell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -346,9 +497,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Doorbell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -405,6 +560,7 @@
 				686451451A1A3B9B007F5DD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		686451461A1A3B9B007F5DD1 /* Build configuration list for PBXNativeTarget "DoorbellTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +569,7 @@
 				686451481A1A3B9B007F5DD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
