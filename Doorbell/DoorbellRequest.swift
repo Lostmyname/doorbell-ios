@@ -11,10 +11,11 @@ import Alamofire
 
 class DoorbellRequest: NSObject {
     class func send() {
-        Alamofire.request(.POST, "https://lostmydoorbell.herokuapp.com/", parameters: [
-            "token": self.slackToken(),
-            "user_name": UIDevice.currentDevice().name
-        ])
+        println("Boo")
+//        Alamofire.request(.POST, "https://lostmydoorbell.herokuapp.com/", parameters: [
+//            "token": self.slackToken(),
+//            "user_name": UIDevice.currentDevice().name
+//        ])
     }
     
     class func slackToken() -> AnyObject {
