@@ -13,6 +13,14 @@
 		3BEB89BB1AF7A6130057FE64 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB89BA1AF7A6130057FE64 /* MainInterface.storyboard */; };
 		3BEB89BE1AF7A6130057FE64 /* DoorbellExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BEB89B31AF7A6130057FE64 /* DoorbellExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3BEB89C21AF7A6830057FE64 /* DoorbellRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686451891A1A4CAE007F5DD1 /* DoorbellRequest.swift */; };
+		3BEB89CC1AF7A8790057FE64 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB89CB1AF7A8790057FE64 /* InterfaceController.swift */; };
+		3BEB89CE1AF7A8790057FE64 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB89CD1AF7A8790057FE64 /* GlanceController.swift */; };
+		3BEB89D01AF7A8790057FE64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB89CF1AF7A8790057FE64 /* Images.xcassets */; };
+		3BEB89D41AF7A8790057FE64 /* Doorbell WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB89D31AF7A8790057FE64 /* Doorbell WatchKit App.app */; };
+		3BEB89DC1AF7A8790057FE64 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB89DA1AF7A8790057FE64 /* Interface.storyboard */; };
+		3BEB89DE1AF7A87A0057FE64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB89DD1AF7A87A0057FE64 /* Images.xcassets */; };
+		3BEB89E11AF7A87A0057FE64 /* Doorbell WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BEB89C71AF7A8790057FE64 /* Doorbell WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3BEB89EA1AF7BB540057FE64 /* DoorbellRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686451891A1A4CAE007F5DD1 /* DoorbellRequest.swift */; };
 		684D63F71A1E3EEC00EC0170 /* open-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 684D63F31A1E3EEC00EC0170 /* open-active.png */; };
 		684D63F81A1E3EEC00EC0170 /* open-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 684D63F41A1E3EEC00EC0170 /* open-active@2x.png */; };
 		684D63F91A1E3EEC00EC0170 /* open.png in Resources */ = {isa = PBXBuildFile; fileRef = 684D63F51A1E3EEC00EC0170 /* open.png */; };
@@ -55,6 +63,20 @@
 			remoteGlobalIDString = 3BEB89B21AF7A6130057FE64;
 			remoteInfo = DoorbellExt;
 		};
+		3BEB89D51AF7A8790057FE64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6864511C1A1A3B9B007F5DD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BEB89D21AF7A8790057FE64;
+			remoteInfo = "Doorbell WatchKit App";
+		};
+		3BEB89DF1AF7A87A0057FE64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6864511C1A1A3B9B007F5DD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BEB89C61AF7A8790057FE64;
+			remoteInfo = "Doorbell WatchKit Extension";
+		};
 		6864513A1A1A3B9B007F5DD1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6864511C1A1A3B9B007F5DD1 /* Project object */;
@@ -92,6 +114,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				3BEB89E11AF7A87A0057FE64 /* Doorbell WatchKit Extension.appex in Embed App Extensions */,
 				3BEB89BE1AF7A6130057FE64 /* DoorbellExt.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -116,6 +139,15 @@
 		3BEB89B71AF7A6130057FE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BEB89B81AF7A6130057FE64 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		3BEB89BA1AF7A6130057FE64 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		3BEB89C71AF7A8790057FE64 /* Doorbell WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Doorbell WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEB89CA1AF7A8790057FE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BEB89CB1AF7A8790057FE64 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		3BEB89CD1AF7A8790057FE64 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		3BEB89CF1AF7A8790057FE64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3BEB89D31AF7A8790057FE64 /* Doorbell WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Doorbell WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEB89D91AF7A8790057FE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BEB89DB1AF7A8790057FE64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		3BEB89DD1AF7A87A0057FE64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		684D63F31A1E3EEC00EC0170 /* open-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open-active.png"; sourceTree = "<group>"; };
 		684D63F41A1E3EEC00EC0170 /* open-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open-active@2x.png"; sourceTree = "<group>"; };
 		684D63F51A1E3EEC00EC0170 /* open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = open.png; sourceTree = "<group>"; };
@@ -147,6 +179,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BEB89B41AF7A6130057FE64 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEB89C41AF7A8790057FE64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +224,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3BEB89C81AF7A8790057FE64 /* Doorbell WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB89CB1AF7A8790057FE64 /* InterfaceController.swift */,
+				3BEB89CD1AF7A8790057FE64 /* GlanceController.swift */,
+				3BEB89CF1AF7A8790057FE64 /* Images.xcassets */,
+				3BEB89C91AF7A8790057FE64 /* Supporting Files */,
+			);
+			path = "Doorbell WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		3BEB89C91AF7A8790057FE64 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB89CA1AF7A8790057FE64 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3BEB89D71AF7A8790057FE64 /* Doorbell WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB89DA1AF7A8790057FE64 /* Interface.storyboard */,
+				3BEB89DD1AF7A87A0057FE64 /* Images.xcassets */,
+				3BEB89D81AF7A8790057FE64 /* Supporting Files */,
+			);
+			path = "Doorbell WatchKit App";
+			sourceTree = "<group>";
+		};
+		3BEB89D81AF7A8790057FE64 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB89D91AF7A8790057FE64 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		6864511B1A1A3B9B007F5DD1 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +268,8 @@
 				686451261A1A3B9B007F5DD1 /* Doorbell */,
 				6864513C1A1A3B9B007F5DD1 /* DoorbellTests */,
 				3BEB89B51AF7A6130057FE64 /* DoorbellExt */,
+				3BEB89C81AF7A8790057FE64 /* Doorbell WatchKit Extension */,
+				3BEB89D71AF7A8790057FE64 /* Doorbell WatchKit App */,
 				6864514E1A1A3C96007F5DD1 /* Frameworks */,
 				686451251A1A3B9B007F5DD1 /* Products */,
 			);
@@ -203,6 +281,8 @@
 				686451241A1A3B9B007F5DD1 /* Doorbell.app */,
 				686451391A1A3B9B007F5DD1 /* DoorbellTests.xctest */,
 				3BEB89B31AF7A6130057FE64 /* DoorbellExt.appex */,
+				3BEB89C71AF7A8790057FE64 /* Doorbell WatchKit Extension.appex */,
+				3BEB89D31AF7A8790057FE64 /* Doorbell WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -296,6 +376,39 @@
 			productReference = 3BEB89B31AF7A6130057FE64 /* DoorbellExt.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		3BEB89C61AF7A8790057FE64 /* Doorbell WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BEB89E51AF7A87A0057FE64 /* Build configuration list for PBXNativeTarget "Doorbell WatchKit Extension" */;
+			buildPhases = (
+				3BEB89C31AF7A8790057FE64 /* Sources */,
+				3BEB89C41AF7A8790057FE64 /* Frameworks */,
+				3BEB89C51AF7A8790057FE64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BEB89D61AF7A8790057FE64 /* PBXTargetDependency */,
+			);
+			name = "Doorbell WatchKit Extension";
+			productName = "Doorbell WatchKit Extension";
+			productReference = 3BEB89C71AF7A8790057FE64 /* Doorbell WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		3BEB89D21AF7A8790057FE64 /* Doorbell WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BEB89E21AF7A87A0057FE64 /* Build configuration list for PBXNativeTarget "Doorbell WatchKit App" */;
+			buildPhases = (
+				3BEB89D11AF7A8790057FE64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Doorbell WatchKit App";
+			productName = "Doorbell WatchKit App";
+			productReference = 3BEB89D31AF7A8790057FE64 /* Doorbell WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		686451231A1A3B9B007F5DD1 /* Doorbell */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 686451431A1A3B9B007F5DD1 /* Build configuration list for PBXNativeTarget "Doorbell" */;
@@ -311,6 +424,7 @@
 			dependencies = (
 				68ED0F3E1A1D0C9800246A9E /* PBXTargetDependency */,
 				3BEB89BD1AF7A6130057FE64 /* PBXTargetDependency */,
+				3BEB89E01AF7A87A0057FE64 /* PBXTargetDependency */,
 			);
 			name = Doorbell;
 			productName = Doorbell;
@@ -348,6 +462,13 @@
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = B6MXRS8JAE;
 					};
+					3BEB89C61AF7A8790057FE64 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = B6MXRS8JAE;
+					};
+					3BEB89D21AF7A8790057FE64 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
 					686451231A1A3B9B007F5DD1 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = B6MXRS8JAE;
@@ -380,6 +501,8 @@
 				686451231A1A3B9B007F5DD1 /* Doorbell */,
 				686451381A1A3B9B007F5DD1 /* DoorbellTests */,
 				3BEB89B21AF7A6130057FE64 /* DoorbellExt */,
+				3BEB89C61AF7A8790057FE64 /* Doorbell WatchKit Extension */,
+				3BEB89D21AF7A8790057FE64 /* Doorbell WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -424,6 +547,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BEB89C51AF7A8790057FE64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEB89D01AF7A8790057FE64 /* Images.xcassets in Resources */,
+				3BEB89D41AF7A8790057FE64 /* Doorbell WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEB89D11AF7A8790057FE64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEB89DC1AF7A8790057FE64 /* Interface.storyboard in Resources */,
+				3BEB89DE1AF7A87A0057FE64 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		686451221A1A3B9B007F5DD1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -464,6 +605,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BEB89C31AF7A8790057FE64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEB89EA1AF7BB540057FE64 /* DoorbellRequest.swift in Sources */,
+				3BEB89CC1AF7A8790057FE64 /* InterfaceController.swift in Sources */,
+				3BEB89CE1AF7A8790057FE64 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		686451201A1A3B9B007F5DD1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -490,6 +641,16 @@
 			target = 3BEB89B21AF7A6130057FE64 /* DoorbellExt */;
 			targetProxy = 3BEB89BC1AF7A6130057FE64 /* PBXContainerItemProxy */;
 		};
+		3BEB89D61AF7A8790057FE64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BEB89D21AF7A8790057FE64 /* Doorbell WatchKit App */;
+			targetProxy = 3BEB89D51AF7A8790057FE64 /* PBXContainerItemProxy */;
+		};
+		3BEB89E01AF7A87A0057FE64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BEB89C61AF7A8790057FE64 /* Doorbell WatchKit Extension */;
+			targetProxy = 3BEB89DF1AF7A87A0057FE64 /* PBXContainerItemProxy */;
+		};
 		6864513B1A1A3B9B007F5DD1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 686451231A1A3B9B007F5DD1 /* Doorbell */;
@@ -503,6 +664,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3BEB89DA1AF7A8790057FE64 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BEB89DB1AF7A8790057FE64 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		6864512D1A1A3B9B007F5DD1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -551,6 +720,76 @@
 				INFOPLIST_FILE = DoorbellExt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3BEB89E31AF7A87A0057FE64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Doorbell_WatchKit_Extension;
+				INFOPLIST_FILE = "Doorbell WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		3BEB89E41AF7A87A0057FE64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = Doorbell_WatchKit_Extension;
+				INFOPLIST_FILE = "Doorbell WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		3BEB89E61AF7A87A0057FE64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Doorbell WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3BEB89E71AF7A87A0057FE64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Doorbell WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -702,6 +941,22 @@
 			buildConfigurations = (
 				3BEB89C01AF7A6130057FE64 /* Debug */,
 				3BEB89C11AF7A6130057FE64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3BEB89E21AF7A87A0057FE64 /* Build configuration list for PBXNativeTarget "Doorbell WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BEB89E31AF7A87A0057FE64 /* Debug */,
+				3BEB89E41AF7A87A0057FE64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3BEB89E51AF7A87A0057FE64 /* Build configuration list for PBXNativeTarget "Doorbell WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BEB89E61AF7A87A0057FE64 /* Debug */,
+				3BEB89E71AF7A87A0057FE64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
