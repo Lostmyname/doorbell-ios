@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3B2CD5DE1AF78C87001E446B /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B2CD5DD1AF78C87001E446B /* settings.plist */; };
+		3BC6E94E1AF8DF6000DD2027 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B2CD5DD1AF78C87001E446B /* settings.plist */; };
+		3BC6E9521AF8DF7100DD2027 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B2CD5DD1AF78C87001E446B /* settings.plist */; };
 		3BEB89B41AF7A6130057FE64 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6864514F1A1A3C96007F5DD1 /* NotificationCenter.framework */; };
 		3BEB89B91AF7A6130057FE64 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB89B81AF7A6130057FE64 /* TodayViewController.swift */; };
 		3BEB89BB1AF7A6130057FE64 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB89BA1AF7A6130057FE64 /* MainInterface.storyboard */; };
@@ -544,6 +546,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BC6E94E1AF8DF6000DD2027 /* settings.plist in Resources */,
 				3BEB89BB1AF7A6130057FE64 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +555,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BC6E9521AF8DF7100DD2027 /* settings.plist in Resources */,
 				3BEB89D01AF7A8790057FE64 /* Images.xcassets in Resources */,
 				3BEB89D41AF7A8790057FE64 /* Doorbell WatchKit App.app in Resources */,
 			);
