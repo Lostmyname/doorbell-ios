@@ -16,9 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ad2-eD-tfC">
-                                <rect key="frame" x="16" y="4" width="288" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ad2-eD-tfC">
+                                <rect key="frame" x="0.0" y="7" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="0M9-6G-RdD"/>
+                                    <constraint firstAttribute="height" constant="30" id="JoC-bt-F2M"/>
+                                </constraints>
                                 <state key="normal" title="Let me in!">
+                                    <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -27,7 +32,9 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="Ad2-eD-tfC" secondAttribute="bottom" constant="3" id="9xw-MT-WZC"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="Ad2-eD-tfC" secondAttribute="bottom" id="CBB-8r-Bmg"/>
+                            <constraint firstItem="Ad2-eD-tfC" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="7" id="luD-c7-wBt"/>
+                            <constraint firstItem="Ad2-eD-tfC" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="qhQ-2I-ZIO"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -36,6 +43,9 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="37"/>
+                    <connections>
+                        <outlet property="letMeInButton" destination="Ad2-eD-tfC" id="wMU-Kp-WGn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

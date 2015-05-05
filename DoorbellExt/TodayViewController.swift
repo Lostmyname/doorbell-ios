@@ -11,8 +11,14 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
         
+    @IBOutlet weak var letMeInButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        letMeInButton.layer.cornerRadius = 5
+        letMeInButton.layer.backgroundColor = UIColor.whiteColor().CGColor
+        letMeInButton.alpha = 0.5
         // Do any additional setup after loading the view from its nib.
     }
     
@@ -23,6 +29,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBAction func openDoor() {
         DoorbellRequest.send()
+    }
+    
+    func widgetMarginInsetsForProposedMarginInsets(defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(defaultMarginInsets.top, defaultMarginInsets.left, 10.0, defaultMarginInsets.right)
     }
     
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {

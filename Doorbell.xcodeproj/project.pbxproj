@@ -13,7 +13,7 @@
 		3BEB89B41AF7A6130057FE64 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6864514F1A1A3C96007F5DD1 /* NotificationCenter.framework */; };
 		3BEB89B91AF7A6130057FE64 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB89B81AF7A6130057FE64 /* TodayViewController.swift */; };
 		3BEB89BB1AF7A6130057FE64 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB89BA1AF7A6130057FE64 /* MainInterface.storyboard */; };
-		3BEB89BE1AF7A6130057FE64 /* DoorbellExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BEB89B31AF7A6130057FE64 /* DoorbellExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3BEB89BE1AF7A6130057FE64 /* Doorbell.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BEB89B31AF7A6130057FE64 /* Doorbell.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3BEB89C21AF7A6830057FE64 /* DoorbellRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686451891A1A4CAE007F5DD1 /* DoorbellRequest.swift */; };
 		3BEB89CC1AF7A8790057FE64 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB89CB1AF7A8790057FE64 /* InterfaceController.swift */; };
 		3BEB89CE1AF7A8790057FE64 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB89CD1AF7A8790057FE64 /* GlanceController.swift */; };
@@ -117,7 +117,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				3BEB89E11AF7A87A0057FE64 /* Doorbell WatchKit Extension.appex in Embed App Extensions */,
-				3BEB89BE1AF7A6130057FE64 /* DoorbellExt.appex in Embed App Extensions */,
+				3BEB89BE1AF7A6130057FE64 /* Doorbell.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +137,7 @@
 
 /* Begin PBXFileReference section */
 		3B2CD5DD1AF78C87001E446B /* settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
-		3BEB89B31AF7A6130057FE64 /* DoorbellExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DoorbellExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEB89B31AF7A6130057FE64 /* Doorbell.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Doorbell.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEB89B71AF7A6130057FE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BEB89B81AF7A6130057FE64 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		3BEB89BA1AF7A6130057FE64 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 			children = (
 				686451241A1A3B9B007F5DD1 /* Doorbell.app */,
 				686451391A1A3B9B007F5DD1 /* DoorbellTests.xctest */,
-				3BEB89B31AF7A6130057FE64 /* DoorbellExt.appex */,
+				3BEB89B31AF7A6130057FE64 /* Doorbell.appex */,
 				3BEB89C71AF7A8790057FE64 /* Doorbell WatchKit Extension.appex */,
 				3BEB89D31AF7A8790057FE64 /* Doorbell WatchKit App.app */,
 			);
@@ -375,7 +375,7 @@
 			);
 			name = DoorbellExt;
 			productName = DoorbellExt;
-			productReference = 3BEB89B31AF7A6130057FE64 /* DoorbellExt.appex */;
+			productReference = 3BEB89B31AF7A6130057FE64 /* Doorbell.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		3BEB89C61AF7A8790057FE64 /* Doorbell WatchKit Extension */ = {
@@ -699,6 +699,8 @@
 		3BEB89C01AF7A6130057FE64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -709,7 +711,7 @@
 				);
 				INFOPLIST_FILE = DoorbellExt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Doorbell;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -717,6 +719,8 @@
 		3BEB89C11AF7A6130057FE64 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -724,7 +728,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = DoorbellExt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Doorbell;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
