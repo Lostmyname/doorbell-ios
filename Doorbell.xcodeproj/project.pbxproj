@@ -10,6 +10,9 @@
 		3B2CD5DE1AF78C87001E446B /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B2CD5DD1AF78C87001E446B /* settings.plist */; };
 		3BC6E94E1AF8DF6000DD2027 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B2CD5DD1AF78C87001E446B /* settings.plist */; };
 		3BC6E9521AF8DF7100DD2027 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B2CD5DD1AF78C87001E446B /* settings.plist */; };
+		3BCB8B531AFA7B3C008C89C9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68ED0F3A1A1D0C9100246A9E /* Alamofire.framework */; };
+		3BCB8B561AFA7EB9008C89C9 /* Doorbell WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB89D31AF7A8790057FE64 /* Doorbell WatchKit App.app */; };
+		3BCB8B571AFA7F6C008C89C9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68ED0F3A1A1D0C9100246A9E /* Alamofire.framework */; };
 		3BEB89B41AF7A6130057FE64 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6864514F1A1A3C96007F5DD1 /* NotificationCenter.framework */; };
 		3BEB89B91AF7A6130057FE64 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB89B81AF7A6130057FE64 /* TodayViewController.swift */; };
 		3BEB89BB1AF7A6130057FE64 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB89BA1AF7A6130057FE64 /* MainInterface.storyboard */; };
@@ -18,7 +21,6 @@
 		3BEB89CC1AF7A8790057FE64 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB89CB1AF7A8790057FE64 /* InterfaceController.swift */; };
 		3BEB89CE1AF7A8790057FE64 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB89CD1AF7A8790057FE64 /* GlanceController.swift */; };
 		3BEB89D01AF7A8790057FE64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB89CF1AF7A8790057FE64 /* Images.xcassets */; };
-		3BEB89D41AF7A8790057FE64 /* Doorbell WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB89D31AF7A8790057FE64 /* Doorbell WatchKit App.app */; };
 		3BEB89DC1AF7A8790057FE64 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB89DA1AF7A8790057FE64 /* Interface.storyboard */; };
 		3BEB89DE1AF7A87A0057FE64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB89DD1AF7A87A0057FE64 /* Images.xcassets */; };
 		3BEB89E11AF7A87A0057FE64 /* Doorbell WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BEB89C71AF7A8790057FE64 /* Doorbell WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -58,19 +60,19 @@
 			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
 			remoteInfo = "Alamofire OSX Tests";
 		};
+		3BCB8B541AFA7EB0008C89C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6864511C1A1A3B9B007F5DD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BEB89D21AF7A8790057FE64;
+			remoteInfo = "Doorbell WatchKit App";
+		};
 		3BEB89BC1AF7A6130057FE64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6864511C1A1A3B9B007F5DD1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3BEB89B21AF7A6130057FE64;
 			remoteInfo = DoorbellExt;
-		};
-		3BEB89D51AF7A8790057FE64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6864511C1A1A3B9B007F5DD1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3BEB89D21AF7A8790057FE64;
-			remoteInfo = "Doorbell WatchKit App";
 		};
 		3BEB89DF1AF7A87A0057FE64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -180,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCB8B531AFA7B3C008C89C9 /* Alamofire.framework in Frameworks */,
 				3BEB89B41AF7A6130057FE64 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCB8B571AFA7F6C008C89C9 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +393,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3BEB89D61AF7A8790057FE64 /* PBXTargetDependency */,
+				3BCB8B551AFA7EB0008C89C9 /* PBXTargetDependency */,
 			);
 			name = "Doorbell WatchKit Extension";
 			productName = "Doorbell WatchKit Extension";
@@ -555,9 +559,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCB8B561AFA7EB9008C89C9 /* Doorbell WatchKit App.app in Resources */,
 				3BC6E9521AF8DF7100DD2027 /* settings.plist in Resources */,
 				3BEB89D01AF7A8790057FE64 /* Images.xcassets in Resources */,
-				3BEB89D41AF7A8790057FE64 /* Doorbell WatchKit App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,15 +645,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3BCB8B551AFA7EB0008C89C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BEB89D21AF7A8790057FE64 /* Doorbell WatchKit App */;
+			targetProxy = 3BCB8B541AFA7EB0008C89C9 /* PBXContainerItemProxy */;
+		};
 		3BEB89BD1AF7A6130057FE64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3BEB89B21AF7A6130057FE64 /* DoorbellExt */;
 			targetProxy = 3BEB89BC1AF7A6130057FE64 /* PBXContainerItemProxy */;
-		};
-		3BEB89D61AF7A8790057FE64 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3BEB89D21AF7A8790057FE64 /* Doorbell WatchKit App */;
-			targetProxy = 3BEB89D51AF7A8790057FE64 /* PBXContainerItemProxy */;
 		};
 		3BEB89E01AF7A87A0057FE64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
