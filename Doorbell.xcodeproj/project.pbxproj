@@ -479,6 +479,11 @@
 					686451231A1A3B9B007F5DD1 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = ELJ895ZVBY;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					686451381A1A3B9B007F5DD1 = {
 						CreatedOnToolsVersion = 6.1;
