@@ -18,6 +18,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         self.setBackground()
+        self.setNotifcationSettings()
         self.locationManager.delegate = self
         self.locationManager.requestAlwaysAuthorization()
     }
@@ -75,7 +76,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.view.backgroundColor = UIColor(patternImage: newImage)
     }
     
+    func setNotifcationSettings() {
+        var types = UIUserNotificationType.Alert | UIUserNotificationType.Badge
+        var settings = UIUserNotificationSettings(forTypes: types, categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+    }
+    
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        println(status.hashValue)
         self.setupIBeaconMonitoring()
     }
     
@@ -85,12 +93,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             println("Can monitor regions")
         }
         var proximityUUID = NSUUID(UUIDString: "43BD5014-5743-463A-9B9F-A47ECA30DF51")
-        var beaconRegion = CLBeaconRegion(proximityUUID: proximityUUID, identifier: "DoorBeacon")
-        beaconRegion.notifyEntryStateOnDisplay = false
+        var beaconRegion = CLBeaconRegion(proximityUUID: proximityUUID, major: 1, minor: 1, identifier: "DoorBeacon")
+        beaconRegion.notifyEntryStateOnDisplay = true
         beaconRegion.notifyOnEntry = true
         beaconRegion.notifyOnExit = false
         self.locationManager.startMonitoringForRegion(beaconRegion)
+        self.locationManager.startRangingBeaconsInRegion(beaconRegion)
         println("Finish setting up monitoring")
+        shoutAlertViewWithText("started monitoring")
     }
     
     func locationManager(manager: CLLocationManager!, didDetermineState state: CLRegionState, forRegion region: CLRegion!) {
@@ -100,6 +110,36 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
         println("didEnterRegion")
     }
+    
+    func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: CLBeaconRegion!) {
+        println("did range beacon")
+        for beacon in beacons as! [CLBeacon] {
+            if (beacon.proximity == .Near || beacon.proximity == .Immediate) {
+                //shoutAlertViewWithText("Buzz!")
+                var localNote = UILocalNotification()
+                localNote.alertBody = "Buzz!"
+                UIApplication.sharedApplication().presentLocalNotificationNow(localNote)
+            }
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager!, monitoringDidFailForRegion region: CLRegion!, withError error: NSError!) {
+        println(error)
+    }
+    
+    func locationManager(manager: CLLocationManager!, rangingBeaconsDidFailForRegion region: CLBeaconRegion!, withError error: NSError!) {
+        println(error)
+    }
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        println(error)
+    }
 
+    func shoutAlertViewWithText(text: String) {
+        var alertController = UIAlertController(title: "Doorbell", message: text, preferredStyle: UIAlertControllerStyle.Alert)
+        var okAction = UIAlertAction(title: "ok", style: UIAlertActionStyle.Default, handler: nil)
+        alertController.addAction(okAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
 }
 
