@@ -13,6 +13,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var opener: UIButton!
     var locationManager = CLLocationManager()
+    var lastBuzz: NSDate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,14 +114,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: CLBeaconRegion!) {
         //println("did range beacon")
-        for beacon in beacons as! [CLBeacon] {
-            if (beacon.proximity == .Near || beacon.proximity == .Immediate) {
-                //shoutAlertViewWithText("Buzz!")
-                DoorbellRequest.send(source: "iBeacon")
-                var localNote = UILocalNotification()
-                localNote.alertBody = "Buzz!"
-                UIApplication.sharedApplication().presentLocalNotificationNow(localNote)
+        if (lastBuzz == nil || abs(lastBuzz!.timeIntervalSinceNow) > 60) {
+            for beacon in beacons as! [CLBeacon] {
+                if (beacon.proximity == .Near || beacon.proximity == .Immediate) {
+                    //shoutAlertViewWithText("Buzz!")
+                    DoorbellRequest.send(source: "iBeacon")
+                    lastBuzz = NSDate()
+                    var localNote = UILocalNotification()
+                    localNote.alertBody = "Buzz!"
+                    UIApplication.sharedApplication().presentLocalNotificationNow(localNote)
+                }
             }
+        } else {
+            shoutAlertViewWithText(String(format:"%f", lastBuzz!.timeIntervalSinceNow))
         }
     }
     
