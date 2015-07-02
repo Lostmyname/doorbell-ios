@@ -10,10 +10,10 @@ import UIKit
 import Alamofire
 
 class DoorbellRequest: NSObject {
-    class func send() {
+    class func send(source: String = "iOS") {
         Alamofire.request(.POST, "https://lostmydoorbell.herokuapp.com/", parameters: [
             "token": self.slackToken(),
-            "user_name": UIDevice.currentDevice().name
+            "user_name": "\(UIDevice.currentDevice().name) (\(source))"
         ])
     }
     

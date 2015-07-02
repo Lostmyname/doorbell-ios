@@ -83,14 +83,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        println(status.hashValue)
+        //println(status.hashValue)
         self.setupIBeaconMonitoring()
     }
     
     func setupIBeaconMonitoring() {
-        println("Start setting up monitoring")
+        //println("Start setting up monitoring")
         if (CLLocationManager.isMonitoringAvailableForClass(CLBeaconRegion)) {
-            println("Can monitor regions")
+            //println("Can monitor regions")
         }
         var proximityUUID = NSUUID(UUIDString: "43BD5014-5743-463A-9B9F-A47ECA30DF51")
         var beaconRegion = CLBeaconRegion(proximityUUID: proximityUUID, major: 1, minor: 1, identifier: "DoorBeacon")
@@ -99,23 +99,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         beaconRegion.notifyOnExit = false
         self.locationManager.startMonitoringForRegion(beaconRegion)
         self.locationManager.startRangingBeaconsInRegion(beaconRegion)
-        println("Finish setting up monitoring")
-        shoutAlertViewWithText("started monitoring")
+        //println("Finish setting up monitoring")
+        //shoutAlertViewWithText("started monitoring")
     }
     
     func locationManager(manager: CLLocationManager!, didDetermineState state: CLRegionState, forRegion region: CLRegion!) {
-        println("didDetermineState")
+        //println("didDetermineState")
     }
     
     func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
-        println("didEnterRegion")
+        //println("didEnterRegion")
     }
     
     func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: CLBeaconRegion!) {
-        println("did range beacon")
+        //println("did range beacon")
         for beacon in beacons as! [CLBeacon] {
             if (beacon.proximity == .Near || beacon.proximity == .Immediate) {
                 //shoutAlertViewWithText("Buzz!")
+                DoorbellRequest.send(source: "iBeacon")
                 var localNote = UILocalNotification()
                 localNote.alertBody = "Buzz!"
                 UIApplication.sharedApplication().presentLocalNotificationNow(localNote)
