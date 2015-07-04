@@ -12,6 +12,7 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var opener: UIButton!
+    @IBOutlet var backgroundToggle: UISwitch!
     var locationManager = CLLocationManager()
     var lastBuzz: NSDate?
 
@@ -19,9 +20,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         self.setBackground()
-        self.setNotifcationSettings()
+        self.setBackgroundSwitch()
         self.locationManager.delegate = self
-        self.locationManager.requestAlwaysAuthorization()
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,6 +77,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.view.backgroundColor = UIColor(patternImage: newImage)
     }
     
+    func setBackgroundSwitch() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let backgroundEnabled = defaults.boolForKey("backgroundEnabled")
+        backgroundToggle.setOn(backgroundEnabled, animated: false)
+    }
+    
+    @IBAction func backgroundToggled() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setBool(backgroundToggle.on, forKey: "backgroundEnabled")
+        defaults.synchronize()
+        
+        if (backgroundToggle.on) {
+            setupIBeaconMonitoring()
+        } else {
+            stopIBeaconMonitoring()
+        }
+    }
+    
     func setNotifcationSettings() {
         var types = UIUserNotificationType.Alert | UIUserNotificationType.Badge
         var settings = UIUserNotificationSettings(forTypes: types, categories: nil)
@@ -88,19 +106,29 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func setupIBeaconMonitoring() {
-        //println("Start setting up monitoring")
-        if (CLLocationManager.isMonitoringAvailableForClass(CLBeaconRegion)) {
-            //println("Can monitor regions")
-        }
-        var proximityUUID = NSUUID(UUIDString: "43BD5014-5743-463A-9B9F-A47ECA30DF51")
+        self.setNotifcationSettings()
+        self.locationManager.requestAlwaysAuthorization()
+        let region = beaconRegion()
+        self.locationManager.startMonitoringForRegion(region)
+        self.locationManager.startRangingBeaconsInRegion(region)
+    }
+    
+    func stopIBeaconMonitoring() {
+        let region = beaconRegion()
+        self.locationManager.stopMonitoringForRegion(region)
+        self.locationManager.stopRangingBeaconsInRegion(region)
+    }
+    
+    func beaconRegion() -> CLBeaconRegion {
+        let path = NSBundle.mainBundle().pathForResource("settings", ofType: "plist")
+        let settings = NSDictionary(contentsOfFile: path!)!
+        let proximityUUID = NSUUID(UUIDString: settings["BeaconUUID"] as! String)
         var beaconRegion = CLBeaconRegion(proximityUUID: proximityUUID, major: 1, minor: 1, identifier: "DoorBeacon")
         beaconRegion.notifyEntryStateOnDisplay = true
         beaconRegion.notifyOnEntry = true
         beaconRegion.notifyOnExit = false
-        self.locationManager.startMonitoringForRegion(beaconRegion)
-        self.locationManager.startRangingBeaconsInRegion(beaconRegion)
-        //println("Finish setting up monitoring")
-        //shoutAlertViewWithText("started monitoring")
+        
+        return beaconRegion
     }
     
     func locationManager(manager: CLLocationManager!, didDetermineState state: CLRegionState, forRegion region: CLRegion!) {
