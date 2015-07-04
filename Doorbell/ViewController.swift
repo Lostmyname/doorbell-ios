@@ -84,7 +84,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        //println(status.hashValue)
         self.setupIBeaconMonitoring()
     }
     
@@ -128,18 +127,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             shoutAlertViewWithText(String(format:"%f", lastBuzz!.timeIntervalSinceNow))
         }
-    }
-    
-    func locationManager(manager: CLLocationManager!, monitoringDidFailForRegion region: CLRegion!, withError error: NSError!) {
-        println(error)
-    }
-    
-    func locationManager(manager: CLLocationManager!, rangingBeaconsDidFailForRegion region: CLBeaconRegion!, withError error: NSError!) {
-        println(error)
-    }
-    
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        println(error)
     }
 
     func shoutAlertViewWithText(text: String) {
