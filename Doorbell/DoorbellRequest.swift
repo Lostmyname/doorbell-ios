@@ -45,7 +45,7 @@ class DoorbellRequest: NSObject {
         let hour = calendar?.component(.CalendarUnitHour, fromDate: now)
         
         let inWorkWeek = weekday > 1 && weekday < 7
-        let inWorkDay = hour > 7 && hour < 8
+        let inWorkDay = hour > 7 && hour < 20
         
         return inWorkDay && inWorkWeek
     }
