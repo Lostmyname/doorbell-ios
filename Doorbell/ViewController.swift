@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     func setBackground() {
-        var sourceImage = UIImage(named: "background.jpg")
+        let sourceImage = UIImage(named: "background.jpg")
         let imageSize = sourceImage?.size
         let width = imageSize?.width
         let height = imageSize?.height
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         
         sourceImage?.drawInRect(thumbnailRect)
         
-        var newImage = UIGraphicsGetImageFromCurrentImageContext()
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
         
         UIGraphicsEndImageContext()
         
